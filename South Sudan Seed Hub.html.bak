@@ -37,13 +37,6 @@
             padding: 20px;
             text-align: left;
         }
-        .section2 {
-            background-color: #007C9E ;
-            background-size: cover;
-          	color: white;
-            padding: 20px;
-            text-align: left;
-        }
         .cta-button {
             background-color: #007C9E;
             color: white;
@@ -81,25 +74,6 @@
         platform that facilitates dialogue, shares knowledge, and promotes
         innovation in the seed sector.</p>
     </div>
-    <div class="section2">
-      <h3>Our Objectives</h3>
-      <p>Objective 1: "To provide a comprehensive analysis of the seed sector in
-        South Sudan, highlighting the challenges and opportunities. </p>
-      <p> </p>
-      Objective 2: "To outline strategic pathways towards a robust seed sector,
-      detailing the ambitions, strategic actions, and key stakeholders for each
-      pathway.
-      <p> </p>
-      Objective 3: To create a Seed Portal that provides access to seed-related
-      information, policies, regulatory provisions, and requirements.
-      <p> </p>
-      Objective 4: "To foster collaboration among seed stakeholders through
-      events and interactive platforms." </div>
-    <div class="section">
-      <h3>Get Involved</h3>
-      <p>Join us in our mission to transform the seed sector in South Sudan. <p>
-       
-      </p>Whether you're a farmer, researcher, policymaker, or seed company, we invite you to collaborate with us. Visit our Contact Us page to get in touch </div>
     <div class="footer">
       <p>Contact Information: [Address, Phone Number, Email]</p>
       <p>© 2023 South Sudan Seed Hub</p>
