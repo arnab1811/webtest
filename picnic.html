@@ -599,234 +599,15 @@
   .hero > *:nth-child(4) { animation-delay: 0.55s; }
   .hero > *:nth-child(5) { animation-delay: 0.7s; }
 
-  /* ── MOBILE FIRST — comprehensive responsive overhaul ── */
-
-  /* Tablet: 481px – 768px */
-  @media (max-width: 768px) {
-    body { font-size: 16px; }
-
-    /* Hero */
-    .hero {
-      min-height: auto;
-      padding: 64px 6% 56px;
-    }
-    .hero h1 { font-size: clamp(2.4rem, 9vw, 4rem); }
-    .hero-sub { font-size: 0.95rem; margin-top: 20px; max-width: 100%; }
-    .hero-meta { gap: 24px; margin-top: 36px; flex-wrap: wrap; }
-    .hero-stat .num { font-size: 1.8rem; }
-    .hero-decor { display: none; }
-
-    /* Intro */
-    .intro-section { padding: 48px 6%; }
-    .intro-section p { font-size: 1rem; }
-
-    /* Trips */
-    .trips-wrapper { padding: 40px 5% 60px; }
-    .trip-card { margin-bottom: 64px; }
-    .trip-number { font-size: 5rem; top: -20px; left: -10px; }
-    .trip-header { grid-template-columns: 1fr; gap: 16px; }
-    .trip-badges { flex-direction: row; flex-wrap: wrap; gap: 8px; min-width: unset; }
-    .badge { flex: 1 1 calc(50% - 4px); min-width: 140px; }
-    .trip-name { font-size: clamp(1.5rem, 5vw, 2rem); }
-    .trip-image-single { height: 220px; }
-    .trip-body { grid-template-columns: 1fr; gap: 24px; }
+  /* responsive */
+  @media (max-width: 680px) {
+    .trip-header { grid-template-columns: 1fr; }
+    .trip-badges { flex-direction: row; flex-wrap: wrap; }
+    .trip-body { grid-template-columns: 1fr; }
     .gem-box { grid-column: auto; }
-    .trip-divider { margin: 56px 0 0; }
-
-    /* Reference table — scrollable */
-    .reference-section { padding: 52px 4%; }
-    .reference-section h2 { font-size: 1.6rem; }
-    .ref-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
-    .ref-table { font-size: 0.82rem; min-width: 560px; }
-    .ref-table thead th { padding: 12px 10px; }
-    .ref-table tbody td { padding: 12px 10px; }
-
-    /* Tips */
-    .tips-section { padding: 52px 5%; }
-    .tips-section h2 { font-size: 1.6rem; margin-bottom: 24px; }
-    .tips-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-
-    /* Footer */
-    .footer { padding: 28px 5%; font-size: 10px; line-height: 1.8; }
-  }
-
-  /* Phone: up to 480px */
-  @media (max-width: 480px) {
-    body { font-size: 15px; line-height: 1.7; }
-
-    /* Hero */
-    .hero {
-      min-height: 100svh;
-      padding: 52px 5% 48px;
-      justify-content: flex-end;
-    }
-    .hero-eyebrow { font-size: 9.5px; letter-spacing: 0.18em; margin-bottom: 16px; }
-    .hero-eyebrow::before { width: 24px; }
-    .hero h1 { font-size: clamp(2.2rem, 11vw, 3.2rem); line-height: 1.02; }
-    .hero-sub { font-size: 0.88rem; margin-top: 16px; }
-    .hero-meta {
-      margin-top: 28px;
-      gap: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      border: 1px solid rgba(138,184,154,0.2);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .hero-stat {
-      padding: 14px 12px;
-      border-right: 1px solid rgba(138,184,154,0.15);
-      border-bottom: 1px solid rgba(138,184,154,0.15);
-    }
-    .hero-stat:nth-child(even) { border-right: none; }
-    .hero-stat:nth-child(3),
-    .hero-stat:nth-child(4) { border-bottom: none; }
-    .hero-stat .num { font-size: 1.6rem; }
-    .hero-stat .label { font-size: 8.5px; }
     .hero-decor { display: none; }
-
-    /* Intro */
-    .intro-section { padding: 36px 5%; }
-    .intro-section p { font-size: 0.92rem; }
-    .section-tag { font-size: 9px; }
-
-    /* Trips wrapper */
-    .trips-wrapper { padding: 32px 4% 48px; }
-    .container { padding: 0 2%; }
-
-    /* Trip card */
-    .trip-card { margin-bottom: 48px; padding-top: 0 !important; }
-    .trip-number { font-size: 4rem; top: -14px; left: -8px; opacity: 0.7; }
-
-    /* Trip header */
-    .trip-header { grid-template-columns: 1fr; gap: 14px; margin-bottom: 18px; }
-    .trip-emoji { font-size: 1.5rem; margin-bottom: 4px; }
-    .trip-name { font-size: clamp(1.35rem, 6.5vw, 1.8rem); }
-    .trip-tagline { font-size: 0.87rem; }
-
-    /* Badges — 2×2 grid on phone */
-    .trip-badges {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      min-width: unset;
-      width: 100%;
-    }
-    .badge {
-      flex: unset;
-      padding: 8px 10px;
-      gap: 6px;
-      border-radius: 8px;
-    }
-    .badge-icon { font-size: 0.9rem; }
-    .badge-label { font-size: 8px; letter-spacing: 0.1em; }
-    .badge-val { font-size: 0.8rem; }
-
-    /* Trip image */
-    .trip-image-single {
-      height: 200px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    /* Trip body */
-    .trip-body {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-    .trip-section-title { font-size: 9px; margin-bottom: 10px; }
-    .trip-body p, .trip-body li { font-size: 0.9rem; line-height: 1.65; }
-    .trip-body ul li { margin-bottom: 5px; }
-
-    /* Gem box */
-    .gem-box {
-      grid-column: auto;
-      padding: 16px 18px;
-      border-radius: 10px;
-    }
-    .gem-box .gem-title { font-size: 8px; }
-    .gem-box p { font-size: 0.88rem; }
-
-    .trip-divider { margin: 40px 0 0; }
-
-    /* Reference section — card layout instead of table */
-    .reference-section { padding: 40px 4%; }
-    .reference-section h2 { font-size: 1.4rem; }
-    .ref-sub { font-size: 0.82rem; margin-bottom: 24px; }
-
-    /* Hide table on small phones; show mobile cards instead */
-    .ref-table-wrap { display: none; }
-    .ref-cards { display: flex !important; flex-direction: column; gap: 12px; max-width: 100%; }
-    .ref-card {
-      background: white;
-      border: 1px solid rgba(44,74,46,0.12);
-      border-radius: 10px;
-      padding: 14px 16px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 10px 14px;
-      align-items: start;
-    }
-    .ref-card-name {
-      grid-column: 1 / -1;
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--forest);
-      margin-bottom: 2px;
-    }
-    .ref-card-row {
-      display: contents;
-    }
-    .ref-card-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 8.5px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 2px;
-    }
-    .ref-card-val {
-      font-size: 0.85rem;
-      color: #3a3a32;
-      font-weight: 500;
-    }
-    .ref-card-best {
-      grid-column: 1 / -1;
-      font-size: 0.82rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 4px;
-      padding-top: 8px;
-      border-top: 1px solid rgba(44,74,46,0.08);
-    }
-
-    /* Tips */
-    .tips-section { padding: 40px 4%; }
-    .tips-section h2 { font-size: 1.4rem; margin-bottom: 20px; }
-    .tips-grid { grid-template-columns: 1fr; gap: 12px; }
-    .tip-card { padding: 18px 16px; }
-    .tip-icon { font-size: 1.5rem; margin-bottom: 8px; }
-    .tip-card h3 { font-size: 1rem; }
-    .tip-card p { font-size: 0.85rem; }
-
-    /* Footer */
-    .footer {
-      padding: 24px 5%;
-      font-size: 9.5px;
-      line-height: 1.9;
-      letter-spacing: 0.08em;
-    }
-  }
-
-  /* Tiny phones: 360px and below */
-  @media (max-width: 360px) {
-    .hero h1 { font-size: 2rem; }
-    .trip-badges { grid-template-columns: 1fr; }
-    .badge { width: 100%; }
-    .hero-meta { grid-template-columns: 1fr 1fr; }
+    .trip-image-strip { grid-template-columns: 1fr; height: auto; }
+    .trip-image-strip img:last-child { display: none; }
   }
 </style>
 </head>
@@ -933,8 +714,6 @@
           <div class="trip-section-title">Getting There & Parking</div>
           <p>Take the N781 from Wageningen toward Ede. Follow signs for <em>Ginkelse Heide</em>. There are several informal parking lay-bys along the Ginkelseweg and Wiekseweg — all free, no time limits. The area is open 24 hours.</p>
           <br>
-          <a href="https://maps.google.com/?q=Ginkelse+Heide,+Ede,+Netherlands" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--forest);color:var(--cream);text-decoration:none;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:9px 14px;border-radius:6px;margin-bottom:12px;">📍 Open in Google Maps</a>
-          <br>
           <div class="trip-section-title">What to Do</div>
           <ul>
             <li>Walk the perimeter path (approx. 4 km loop) for the full heathland panorama</li>
@@ -1014,8 +793,6 @@
           <div class="trip-section-title">Getting There & Parking</div>
           <p>Use the <strong>Hoenderloo entrance</strong> (Houtkampweg 13) for the northern approach — less congested than Otterlo or Schaarsbergen. Book tickets online at <em>hogeveluwe.nl</em> to avoid queuing. Parking is charged separately at the gate.</p>
           <br>
-          <a href="https://maps.google.com/?q=Ingang+Hoenderloo,+Nationaal+Park+De+Hoge+Veluwe" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--forest);color:var(--cream);text-decoration:none;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:9px 14px;border-radius:6px;margin-bottom:12px;">📍 Open in Google Maps</a>
-          <br>
           <div class="trip-section-title">Perfect Picnic Spot</div>
           <ul>
             <li>Cycle ~3 km from the Hoenderloo gate to the <strong>Koperen Kop</strong> viewpoint — open heath, wind, and a 360° horizon</li>
@@ -1093,8 +870,6 @@
         <div>
           <div class="trip-section-title">Getting There & Parking</div>
           <p>Cross the Waal via the A15 bridge at Tiel, then head west along the <strong>Waalbandijk</strong> toward Ochten. The picnic area is signed from the dijk road. Park directly on the dijk verge — no restrictions. <em>Note: during high-water events (not a summer concern) the access road may flood.</em></p>
-          <br>
-          <a href="https://maps.google.com/?q=Waalbandijk,+Ochten,+Netherlands" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--forest);color:var(--cream);text-decoration:none;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:9px 14px;border-radius:6px;margin-bottom:12px;">📍 Open in Google Maps</a>
           <br>
           <div class="trip-section-title">While You're There</div>
           <ul>
@@ -1274,10 +1049,7 @@
 <!-- QUICK REFERENCE TABLE -->
 <section class="reference-section">
   <h2>Quick Reference</h2>
-  <p class="ref-sub">All destinations at a glance — keep it handy in the car.</p>
-
-  <!-- Scrollable table for tablet+ -->
-  <div class="ref-table-wrap">
+  <p class="ref-sub">All destinations at a glance — print this and keep it in the glovebox.</p>
   <table class="ref-table">
     <thead>
       <tr>
@@ -1332,46 +1104,6 @@
       </tr>
     </tbody>
   </table>
-  </div>
-
-  <!-- Mobile card layout (shown only on small phones via CSS) -->
-  <div class="ref-cards" style="display:none;">
-    <div class="ref-card">
-      <div class="ref-card-name">🌾 Ginkelse Heide, Ede</div>
-      <span class="ref-card-label">Drive</span><span class="ref-card-val">~20 min · 18 km</span>
-      <span class="ref-card-label">Entry</span><span class="ref-card-val cost-free">Free</span>
-      <span class="ref-card-label">Parking</span><span class="ref-card-val">Free lay-bys</span>
-      <div class="ref-card-best">Quick, spontaneous, WWII history</div>
-    </div>
-    <div class="ref-card">
-      <div class="ref-card-name">🦌 De Hoge Veluwe NP</div>
-      <span class="ref-card-label">Drive</span><span class="ref-card-val">~40 min · 35 km</span>
-      <span class="ref-card-label">Entry</span><span class="ref-card-val cost-paid">~€14–15</span>
-      <span class="ref-card-label">Parking</span><span class="ref-card-val">~€4 at gate</span>
-      <div class="ref-card-best">Full Veluwe day, free bikes, Van Gogh</div>
-    </div>
-    <div class="ref-card">
-      <div class="ref-card-name">🌊 Waalbanddijk, Ochten</div>
-      <span class="ref-card-label">Drive</span><span class="ref-card-val">~20 min · 17 km</span>
-      <span class="ref-card-label">Entry</span><span class="ref-card-val cost-free">Free</span>
-      <span class="ref-card-label">Parking</span><span class="ref-card-val">Free on dijk</span>
-      <div class="ref-card-best">River views, simplest outing, sunset</div>
-    </div>
-    <div class="ref-card">
-      <div class="ref-card-name">🐎 Millingerwaard, Kekerdom</div>
-      <span class="ref-card-label">Drive</span><span class="ref-card-val">~50 min · 48 km</span>
-      <span class="ref-card-label">Entry</span><span class="ref-card-val cost-free">Free</span>
-      <span class="ref-card-label">Parking</span><span class="ref-card-val">€3 / day</span>
-      <div class="ref-card-best">Wild floodplain, horses, tea garden</div>
-    </div>
-    <div class="ref-card">
-      <div class="ref-card-name">🌲 Amerongse Berg, Amerongen</div>
-      <span class="ref-card-label">Drive</span><span class="ref-card-val">~35 min · 28 km</span>
-      <span class="ref-card-label">Entry</span><span class="ref-card-val cost-free">Free</span>
-      <span class="ref-card-label">Parking</span><span class="ref-card-val">Free at Landal</span>
-      <div class="ref-card-best">Cool forest, ridge views, castle village</div>
-    </div>
-  </div>
 </section>
 
 <!-- TIPS -->
@@ -1413,7 +1145,6 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p style="font-size:13px; color:rgba(245,240,232,0.75); margin-bottom:10px; letter-spacing:0.05em;">Prepared by <strong style="color:var(--sage, #8ab89a);">Arnab Gupta</strong> &amp; <strong style="color:var(--sage, #8ab89a);">Claude</strong> &nbsp;·&nbsp; Wageningen, May 2025</p>
   <p>Compiled for summer 2025 · Starting from Wageningen, Gelderland · All drive times are estimates in normal traffic conditions · Entry fees subject to change — verify at venue websites before departure</p>
 </footer>
 
